@@ -1,0 +1,8 @@
+images:
+- path: spec/image
+  kind: KafkaConnect
+
+replicas:
+- path: spec/replicas
+  create: true
+  kind: KafkaConnect
