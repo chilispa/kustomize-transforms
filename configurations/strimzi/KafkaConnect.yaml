@@ -6,3 +6,9 @@ replicas:
 - path: spec/replicas
   create: true
   kind: KafkaConnect
+
+nameReference:
+- kind: ConfigMap
+  fieldSpecs:
+    - path: spec/metricsConfig/valueFrom/configMapKeyRef/name
+      kind: KafkaConnect
