@@ -1,0 +1,15 @@
+replicas:
+- path: spec/kafka/replicas
+  create: true
+  kind: Kafka
+- path: spec/zookeeper/replicas
+  create: true
+  kind: Kafka
+
+nameReference:
+- kind: ConfigMap
+  fieldSpecs:
+    - path: spec/kafka/metricsConfig/valueFrom/configMapKeyRef/name
+      kind: Kafka
+    - path: spec/zookeeper/metricsConfig/valueFrom/configMapKeyRef/name
+      kind: Kafka
