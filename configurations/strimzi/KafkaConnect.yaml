@@ -12,3 +12,7 @@ nameReference:
   fieldSpecs:
     - path: spec/metricsConfig/valueFrom/configMapKeyRef/name
       kind: KafkaConnect
+- kind: Secret
+  fieldSpecs:
+    - path: spec/externalConfiguration/env/valueFrom/secretKeyRef/name
+      kind: KafkaConnect
